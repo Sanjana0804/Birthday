@@ -1845,18 +1845,130 @@ h2 {
         width: 100%;
     }
 }
-/* Remove only the center video play button */
+/* =========================================
+   CUSTOM LETTER VIDEO PLAYER
+   Removes browser's big center play icon
+========================================= */
 
-.letter-photo video::-webkit-media-controls-overlay-play-button {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
+.custom-video {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #000;
 }
 
-.letter-photo video::-webkit-media-controls-start-playback-button {
-    display: none !important;
+.custom-video video {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    background: #000;
 }
 
-.letter-photo video {
-    -webkit-tap-highlight-color: transparent;
+
+/* VIDEO CONTROLS */
+
+.custom-controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 10px 12px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.78)
+    );
+
+    z-index: 20;
+}
+
+
+/* PLAY / PAUSE / VOLUME / FULLSCREEN */
+
+.video-control-btn {
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.video-control-btn:active {
+    transform: scale(0.9);
+}
+
+
+/* TIME */
+
+.video-time {
+    color: white;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    min-width: 65px;
+}
+
+
+/* PROGRESS */
+
+.video-progress {
+    flex: 1;
+
+    width: 100%;
+
+    height: 4px;
+
+    cursor: pointer;
+
+    accent-color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .custom-video video {
+        height: 360px;
+    }
+
+    .custom-controls {
+        gap: 3px;
+        padding: 8px;
+    }
+
+    .video-control-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .video-time {
+        font-size: 10px;
+        min-width: 58px;
+    }
+
 }
