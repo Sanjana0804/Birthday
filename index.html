@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>A Little Birthday Surprise 🎀</title>
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     AESTHETIC BACKGROUND
+========================= -->
+
+<div class="aesthetic-bg">
+
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <span class="floating flower1">🌸</span>
+    <span class="floating flower2">🌷</span>
+    <span class="floating sparkle1">✦</span>
+    <span class="floating sparkle2">✨</span>
+    <span class="floating bow1">🎀</span>
+
+   
+
+</div>
+
+
+<!-- PARTICLES -->
+
+<div class="particles"></div>
+
+
+<!-- =========================
+     SCREEN 1
+     OPENING
+========================= -->
+
+<section
+    class="screen active"
+    id="opening"
+>
+
+    <div class="opening-card">
+
+        <div class="top-decor">
+
+            ✦ 🌸 🎀 ✧
+
+        </div>
+
+
+        <p class="mini-text">
+
+            A LITTLE SOMETHING MADE JUST FOR YOU
+
+        </p>
+
+
+        <h1>
+
+            Heyyyy
+
+            <br>
+
+            <span>Birthday Girl! 🎀</span>
+
+        </h1>
+
+
+        <p class="opening-message">
+
+            Okayyy... before you continue 👀
+
+            <br><br>
+
+            Someone spent a little time creating
+            something especially for you.
+
+            <br><br>
+
+            So promise me one thing...
+
+            <br>
+
+            <b>Don't skip anything! 🥹✨</b>
+
+        </p>
+
+
+        <div
+            class="cute-gift"
+            id="startSurprise"
+        >
+
+            <div class="gift-ribbon">
+
+                🎀
+
+            </div>
+
+            <div class="gift-icon">
+
+                🎁
+
+            </div>
+
+            <p>
+
+                Tap to begin your adventure ✨
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 2
+     QUESTIONS
+========================= -->
+
+<section
+    class="screen"
+    id="questions"
+>
+
+    <div class="question-card">
+
+        <div class="question-top">
+
+            <span>🎀</span>
+
+            <p>
+
+                LITTLE QUESTION GAME
+
+            </p>
+
+            <span>🌸</span>
+
+        </div>
+
+
+        <div class="progress">
+
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+
+        <h2 id="questionText">
+
+            Are you ready for this surprise? 👀
+
+        </h2>
+
+
+        <p id="questionHint">
+
+            Don't overthink it 😌
+
+        </p>
+
+
+        <div class="answers">
+
+            <button
+                class="answer-btn answer1"
+            >
+                YESSS 😭🎀
+            </button>
+
+
+            <button
+                class="answer-btn answer2"
+            >
+                Nope 😂
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 3
+     PASSWORD
+========================= -->
+
+<section
+    class="screen"
+    id="passwordScreen"
+>
+
+    <div class="password-card">
+
+        <div class="lock-circle">
+
+            🔐
+
+        </div>
+
+
+        <p class="mini-text">
+
+            SECRET ACCESS
+
+        </p>
+
+
+        <h2>
+
+            One little secret first 👀
+
+        </h2>
+
+
+        <p>
+
+            Enter your date of birth
+            to unlock your surprise 🎀
+
+        </p>
+
+
+        <input
+            type="password"
+            id="password"
+            placeholder="DDMMYYYY"
+            maxlength="8"
+        >
+
+
+        <p
+            id="passwordError"
+            class="error"
+        ></p>
+
+
+        <button
+            class="main-btn"
+            id="unlockBtn"
+        >
+
+            Unlock My Surprise ✨
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 4
+     GIFT
+========================= -->
+
+<section
+    class="screen"
+    id="giftScreen"
+>
+
+    <div class="gift-screen-content">
+
+        <p class="mini-text">
+
+            ALMOST THERE
+
+        </p>
+
+
+        <h2>
+
+            Your surprise is waiting... 🎀
+
+        </h2>
+
+
+        <p>
+
+            Go ahead and open it! 👀✨
+
+        </p>
+
+
+        <div
+            class="big-gift"
+            id="giftBox"
+        >
+
+            <div class="gift-lid"></div>
+
+            <div class="gift-box-main">
+
+                🎁
+
+            </div>
+
+            <div class="gift-bow">
+
+                🎀
+
+            </div>
+
+        </div>
+
+
+        <p class="tap-text">
+
+            Tap the gift 🎁
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 5
+     CAKE
+========================= -->
+
+<section
+    class="screen"
+    id="cakeScreen"
+>
+
+    <div class="cake-card">
+
+        <p class="mini-text">
+
+            MAKE A WISH
+
+        </p>
+
+
+        <h2>
+
+            Happy Birthday! 🎂🎀
+
+        </h2>
+
+
+        <p id="wishText">
+
+            Close your eyes for a moment,
+            make your wish...
+            and blow the candles ✨
+
+        </p>
+
+
+        <div class="cake-stage">
+
+            <span class="cake-decor decor1">🌸</span>
+            <span class="cake-decor decor2">✨</span>
+            <span class="cake-decor decor3">🌷</span>
+            <span class="cake-decor decor4">🎀</span>
+
+
+            <!-- CANDLES -->
+
+            <div class="candles">
+
+                <div class="candle">
+
+                    <div class="flame"></div>
+
+                </div>
+
+                <div class="candle">
+
+                    <div class="flame"></div>
+
+                </div>
+
+                <div class="candle">
+
+                    <div class="flame"></div>
+
+                </div>
+
+                <div class="candle">
+
+                    <div class="flame"></div>
+
+                </div>
+
+                <div class="candle">
+
+                    <div class="flame"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAKE -->
+
+            <div class="cake">
+
+                <div class="cake-top">
+
+                    🌸 ✦ 🌸
+
+                </div>
+
+                <div class="cake-layer layer1"></div>
+
+                <div class="cake-layer layer2"></div>
+
+                <div class="cake-layer layer3"></div>
+
+                <div class="cake-base"></div>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="main-btn blow-btn"
+            id="blowBtn"
+        >
+
+            💨 Blow The Candles ✨
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 6
+     WISH
+========================= -->
+
+<section
+    class="screen"
+    id="wishScreen"
+>
+
+    <div class="wish-card">
+
+        <div class="wish-icon">
+
+            ✨
+
+        </div>
+
+
+        <h2>
+
+            Your wish is safe 🤫
+
+        </h2>
+
+
+        <p>
+
+            Maybe the universe is already
+            working on it... 🌸
+
+            <br><br>
+
+            But wait...
+
+            <br>
+
+            Your surprise isn't over yet 👀🎀
+
+        </p>
+
+
+        <button
+            class="main-btn"
+            id="letterStart"
+        >
+
+            One More Surprise 💌
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 7
+     ENVELOPE
+========================= -->
+
+<section
+    class="screen"
+    id="envelopeScreen"
+>
+
+    <div class="envelope-content">
+
+        <p class="mini-text">
+
+            A LITTLE LETTER FOR YOU
+
+        </p>
+
+
+        <h2>
+
+            Someone wrote you something... 🥹
+
+        </h2>
+
+
+        <p>
+
+            Tap the envelope to open it 💌
+
+        </p>
+
+
+        <div
+            class="envelope"
+            id="envelope"
+        >
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-paper">
+
+                💌
+
+            </div>
+
+            <div class="envelope-sticker">
+
+                🌸
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 8
+     LETTER
+========================= -->
+
+<section class="screen" id="letterScreen">
+
+    <div class="letter-layout">
+
+        <!-- =========================
+             VIDEO
+        ========================== -->
+
+        <div class="letter-photo">
+
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
+                <source
+                    src="images/letter.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support the video tag.
+
+            </video>
+             <!-- CLICK TO OPEN FULL SCREEN -->
+        <button
+            class="video-play-btn"
+            id="openVideoBtn"
+        >
+            ▶
+        </button>
+
+
+            <div class="photo-tape tape1"></div>
+
+            <p>
+                One of my favourite memories 🎥✨
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             LETTER
+        ========================== -->
+
+        <div class="letter-paper">
+
+            <div class="letter-decor">
+                💌 ✨ 🌸
+            </div>
+
+            <p class="letter-date">
+                A LETTER FOR MY CHILDHOOD BEST FRIEND
+            </p>
+
+            <h2>Dear Bestie, 🤍</h2>
+
+
+            <p>
+                Sometimes I sit and think about how it has been more than
+                <strong>10 years</strong> since we became friends, and honestly...
+                I don't know where all that time went.
+            </p>
+
+
+            <p>
+                It feels like yesterday when we were just two kids, worrying about
+                the smallest things and fighting over the most ridiculous topics. 😂
+                And how can I forget our
+                <strong>first proper fight in 8th class</strong>?
+                Jab bhi mujhe yaad aati hai, I can't stop laughing. Seriously,
+                <strong>hum kaisi kaisi baaton par ladte the!</strong>
+                At that time those things felt so serious, aur ab sochti hoon toh
+                bas hasi aati hai. 😂
+            </p>
+
+
+            <p>
+                But somewhere between all those silly fights, random conversations,
+                school days, laughter, photos, and countless memories...
+                <strong>we grew up.</strong>
+            </p>
+
+
+            <p class="special-line">
+                <strong>
+                    Aur pata hi nahi chala kab. 🤍
+                </strong>
+            </p>
+
+
+            <p>
+                Pata hi nahi chala kab woh bachon wali choti-choti baaton par ladne wale hum,
+                itni samajhdari wali baatein karne lage.
+            </p>
+
+
+            <p>
+                Kab hum sirf school gossip discuss karne se
+                <strong>life goals</strong> discuss karne lage.
+            </p>
+
+
+            <p>
+                Kab <em>"kal kya homework hai?"</em> se
+                <strong>"future mein kya karna hai"</strong>
+                tak baat pahunch gayi.
+            </p>
+
+
+            <p>
+                Kab humne apne
+                <strong>
+                    family issues, problems, fears aur life ki tensions
+                </strong>
+                ek doosre ke saath share karni shuru kar di.
+            </p>
+
+
+            <p class="special-line">
+                <strong>
+                    Aur sabse strange baat?
+                    Pata hi nahi chala kab hum itne bade ho gaye. 🌷
+                </strong>
+            </p>
+
+
+            <p>
+                Pehle school se bahar kuch lene jana bhi ek adventure hota tha.
+                Ab hum khud bahar jaate hain, ghoomte hain, apne plans banate hain,
+                aur life ke decisions ke baare mein baatein karte hain.
+            </p>
+
+
+            <p>
+                We spent so much time waiting to grow up... and now when I look back
+                at our old pictures, I realise that
+                <strong>we actually did.</strong>
+            </p>
+
+
+            <p>
+                Those two kids who used to fight over silly things are still somewhere
+                inside us. Bas ab fights ke topics thode upgrade ho gaye hain. 😂
+            </p>
+
+
+            <p>
+                But honestly, one of the most beautiful things about growing up has been
+                knowing that
+                <strong>
+                    you were there through so many parts of it.
+                </strong>
+            </p>
+
+
+            <p>
+                You are not just someone I have known for more than 10 years.
+                You are a part of my childhood, my school life, my embarrassing phases 😂,
+                my laughter, my silly memories, and so many moments that I will
+                always carry with me.
+            </p>
+
+
+            <p>
+                When I look at our old pictures, I don't just see photos.
+            </p>
+
+
+            <p>
+                I see two kids who had absolutely no idea about how much life
+                was going to change.
+            </p>
+
+
+            <p>
+                They didn't know that one day they would sit and discuss life,
+                future, family, problems, goals, and everything that once felt
+                so far away.
+            </p>
+
+
+            <p>
+                Maybe that's what makes these memories so special.
+            </p>
+
+
+            <p class="special-line">
+                <strong>
+                    We didn't realise we were making memories while we were busy
+                    living them. 🤍
+                </strong>
+            </p>
+
+
+            <p>
+                Thank you for being there through more than ten years of my life.
+                Through the silly fights, the random laughter, the embarrassing photos,
+                the serious conversations, and all the versions of ourselves that
+                existed in between.
+            </p>
+
+
+            <p>
+                Life will keep changing, we will keep growing, and who knows where
+                life will take us next...
+            </p>
+
+
+            <p>
+                But I hope that no matter how much time passes, whenever we look back
+                at these memories, we will always remember those two kids who had no idea
+                that their friendship would last this long. 🌷
+            </p>
+
+
+            <p>
+                And honestly...
+            </p>
+
+
+            <p class="special-line">
+                <strong>
+                    I am really grateful that I got to grow up with you. 🤍
+                </strong>
+            </p>
+
+
+            <p>
+                Happy Birthday to my childhood best friend, my partner in countless
+                memories, and the person with whom I somehow survived more than
+                10 years of friendship despite all our stupid fights. 😂🎂🎀
+            </p>
+
+
+            <p>
+                Here's to our childhood, our memories, our growth,
+                and to all the new adventures waiting for us.
+            </p>
+
+
+            <p class="ending-line">
+                <strong>
+                    We grew up... but please promise we never grow up too much.
+                    😂🤍🌸
+                </strong>
+            </p>
+
+
+            <!-- BUTTON AT THE END OF LETTER -->
+
+            <button
+                class="main-btn"
+                id="memoriesBtn"
+            >
+                Open Our Memories 📸✨
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- =========================
+     SCREEN 9
+     MEMORIES
+========================= -->
+
+<section
+    class="screen"
+    id="memoryScreen"
+>
+
+    <div class="memory-container">
+
+        <p class="mini-text">
+
+            LITTLE MOMENTS, BIG MEMORIES
+
+        </p>
+
+
+        <h2>
+
+            A Small Walk Through Memories 📸
+
+        </h2>
+
+
+       <div id="memoryCard" class="polaroid">
+
+    <!-- IMAGE -->
+    <img
+        id="memoryImage"
+        src=""
+        alt="Memory"
+    >
+
+    <!-- VIDEO -->
+    <video
+        id="memoryVideo"
+        controls
+        playsinline
+        preload="metadata"
+        style="display: none;"
+    >
+        Your browser does not support video.
+    </video>
+
+    <div class="polaroid-caption">
+
+        <span id="memoryNumber"></span>
+
+        <p id="memoryText"></p>
+
+    </div>
+
+</div>
+
+
+        <div class="memory-controls">
+
+            <button
+                class="back-btn"
+                id="prevMemory"
+            >
+
+                ← Previous
+
+            </button>
+
+
+            <button
+                class="main-btn"
+                id="nextMemory"
+            >
+
+                Next Memory ✨
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 10
+     FINAL
+========================= -->
+
+<section
+    class="screen"
+    id="finalScreen"
+>
+
+    <div class="final-card">
+
+        <div class="final-decor">
+
+            🎀 🌸 ✨ 🎉 🌷
+
+        </div>
+
+
+        <p class="mini-text">
+
+            THE END... OR IS IT? 👀
+
+        </p>
+
+
+        <h1>
+
+            Happiest Birthday! 🎂
+
+        </h1>
+
+
+        <p>
+
+            Congratulationsss! 🎉
+
+            <br><br>
+
+            You successfully completed
+            your birthday adventure 😭🎀
+
+            <br><br>
+
+            I hope you smiled,
+            laughed a little,
+            and felt special...
+
+            <br><br>
+
+            Because today is your day.
+
+            <br>
+
+            And you officially deserve
+            all the happiness,
+            love and beautiful surprises
+            in the world 🌸✨
+
+            <br><br>
+
+            <b>
+
+                Keep smiling,
+                keep shining,
+                and keep being you. 🎀
+
+            </b>
+
+        </p>
+
+
+        <div class="final-buttons">
+
+            <button
+                class="back-btn"
+                id="finalBack"
+            >
+
+                ← Back to Memories
+
+            </button>
+
+
+            <button
+                class="main-btn"
+                id="restartBtn"
+            >
+
+                Replay The Surprise 🔄
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
