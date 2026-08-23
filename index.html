@@ -618,7 +618,7 @@
 
         <div class="letter-photo">
 
-            <video
+        <!--    <video
                 controls
                 playsinline
                 preload="metadata"
@@ -630,15 +630,30 @@
 
                 Your browser does not support the video tag.
 
-            </video>
+            </video>-->
              <!-- CLICK TO OPEN FULL SCREEN -->
-       <button
+  <!--     <button
             class="video-play-btn"
             id="openVideoBtn"
         >
             ▶
-       </button>
+       </button>-->
+            
 
+                <div class="letter-photo"
+                     onclick="openLightbox(this)">
+
+                    <video src="image/letter.mp4"
+                           muted
+                           preload="metadata"
+                           playsinline>
+                    </video>
+
+                    <div class="video-icon">
+                        ▶
+                    </div>
+
+                </div>
 
             <div class="photo-tape tape1"></div>
 
