@@ -251,31 +251,7 @@ h2 {
 
 /* =========================
    BACK BUTTON
-========================= */
-
-.back-btn {
-    border: 2px solid var(--mint);
-    cursor: pointer;
-
-    padding:
-        14px 25px;
-
-    border-radius: 18px;
-
-    background: var(--cream);
-    color: var(--dark-text);
-
-    font-weight: 600;
-
-    transition: .3s;
-}
-
-.back-btn:hover {
-    background: var(--mint);
-
-    transform:
-        translateY(-4px);
-}
+=======================*/
 
 
 /* =========================
