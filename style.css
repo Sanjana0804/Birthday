@@ -1845,3 +1845,18 @@ h2 {
         width: 100%;
     }
 }
+/* Remove only the center video play button */
+
+.letter-photo video::-webkit-media-controls-overlay-play-button {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+.letter-photo video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
+
+.letter-photo video {
+    -webkit-tap-highlight-color: transparent;
+}
