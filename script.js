@@ -1179,3 +1179,262 @@ $(document).ready(function () {
     loadMemory();
 
 });
+/* =========================================
+   CUSTOM LETTER VIDEO PLAYER
+========================================= */
+
+$(document).ready(function () {
+
+    const video = document.getElementById("letterVideo");
+
+    const playBtn =
+        document.getElementById("videoPlayBtn");
+
+    const progress =
+        document.getElementById("videoProgress");
+
+    const timeDisplay =
+        document.getElementById("videoTime");
+
+    const muteBtn =
+        document.getElementById("videoMuteBtn");
+
+    const fullscreenBtn =
+        document.getElementById("videoFullscreenBtn");
+
+
+    /* Stop if video doesn't exist */
+
+    if (!video) {
+        return;
+    }
+
+
+    /* =========================
+       FORMAT TIME
+    ========================= */
+
+    function formatTime(seconds) {
+
+        if (isNaN(seconds)) {
+            return "0:00";
+        }
+
+        const minutes =
+            Math.floor(seconds / 60);
+
+        const secondsPart =
+            Math.floor(seconds % 60)
+                .toString()
+                .padStart(2, "0");
+
+        return minutes + ":" + secondsPart;
+    }
+
+
+    /* =========================
+       VIDEO LOADED
+    ========================= */
+
+    video.addEventListener(
+        "loadedmetadata",
+        function () {
+
+            timeDisplay.textContent =
+                "0:00 / " +
+                formatTime(video.duration);
+
+        }
+    );
+
+
+    /* =========================
+       PLAY / PAUSE
+    ========================= */
+
+    playBtn.addEventListener(
+        "click",
+        function () {
+
+            if (video.paused) {
+
+                video.play();
+
+            } else {
+
+                video.pause();
+
+            }
+
+        }
+    );
+
+
+    /* =========================
+       VIDEO PLAY
+    ========================= */
+
+    video.addEventListener(
+        "play",
+        function () {
+
+            playBtn.textContent = "❚❚";
+
+        }
+    );
+
+
+    /* =========================
+       VIDEO PAUSE
+    ========================= */
+
+    video.addEventListener(
+        "pause",
+        function () {
+
+            playBtn.textContent = "▶";
+
+        }
+    );
+
+
+    /* =========================
+       UPDATE PROGRESS
+    ========================= */
+
+    video.addEventListener(
+        "timeupdate",
+        function () {
+
+            if (!video.duration) {
+                return;
+            }
+
+            const percentage =
+                (video.currentTime /
+                video.duration) * 100;
+
+
+            progress.value =
+                percentage;
+
+
+            timeDisplay.textContent =
+                formatTime(video.currentTime) +
+                " / " +
+                formatTime(video.duration);
+
+        }
+    );
+
+
+    /* =========================
+       SEEK VIDEO
+    ========================= */
+
+    progress.addEventListener(
+        "input",
+        function () {
+
+            if (!video.duration) {
+                return;
+            }
+
+            video.currentTime =
+                (progress.value / 100) *
+                video.duration;
+
+        }
+    );
+
+
+    /* =========================
+       MUTE / UNMUTE
+    ========================= */
+
+    muteBtn.addEventListener(
+        "click",
+        function () {
+
+            video.muted =
+                !video.muted;
+
+
+            if (video.muted) {
+
+                muteBtn.textContent =
+                    "🔇";
+
+            } else {
+
+                muteBtn.textContent =
+                    "🔊";
+
+            }
+
+        }
+    );
+
+
+    /* =========================
+       FULLSCREEN
+    ========================= */
+
+    fullscreenBtn.addEventListener(
+        "click",
+        function () {
+
+            const container =
+                document.querySelector(
+                    ".custom-video"
+                );
+
+
+            if (!document.fullscreenElement) {
+
+                if (
+                    container.requestFullscreen
+                ) {
+
+                    container.requestFullscreen();
+
+                } else if (
+                    video.webkitEnterFullscreen
+                ) {
+
+                    video.webkitEnterFullscreen();
+
+                }
+
+            } else {
+
+                if (
+                    document.exitFullscreen
+                ) {
+
+                    document.exitFullscreen();
+
+                }
+
+            }
+
+        }
+    );
+
+
+    /* =========================
+       VIDEO ENDED
+    ========================= */
+
+    video.addEventListener(
+        "ended",
+        function () {
+
+            playBtn.textContent = "▶";
+
+            progress.value = 100;
+
+        }
+    );
+
+});
