@@ -616,7 +616,7 @@
              VIDEO
         ========================== -->
 
-        <div class="letter-photo">
+      <!--  <div class="letter-photo">
 
          <video
                 controls
@@ -631,26 +631,89 @@
                 Your browser does not support the video tag.
 
             </video>-->
-             <!-- CLICK TO OPEN FULL SCREEN -->
+             <!-- CLICK TO OPEN FULL SCREEN 
   <button
             class="video-play-btn"
             id="openVideoBtn"
         >
             ▶
   </button>
-            
-
-                
-
-                    
-
-                
-
-            <div class="photo-tape tape1"></div>
+        <div class="photo-tape tape1"></div>
 
             <p>
                 One of my favourite memories 🎥✨
             </p>
+
+        </div>-->
+        <div class="letter-photo">
+
+    <div class="custom-video">
+
+        <video
+            id="letterVideo"
+            playsinline
+            preload="metadata"
+        >
+            <source
+                src="images/letter.mp4"
+                type="video/mp4"
+            >
+
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- CUSTOM VIDEO CONTROLS -->
+        <div class="custom-controls">
+
+            <button
+                type="button"
+                id="videoPlayBtn"
+                class="video-control-btn"
+            >
+                ▶
+            </button>
+
+            <span
+                id="videoTime"
+                class="video-time"
+            >
+                0:00 / 0:00
+            </span>
+
+            <input
+                type="range"
+                id="videoProgress"
+                class="video-progress"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+            <button
+                type="button"
+                id="videoMuteBtn"
+                class="video-control-btn"
+            >
+                🔊
+            </button>
+
+            <button
+                type="button"
+                id="videoFullscreenBtn"
+                class="video-control-btn"
+            >
+                ⛶
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="photo-tape tape1"></div>
+
+    <p>
+        One of my favourite memories 🎥✨
+    </p>
 
         </div>
 
