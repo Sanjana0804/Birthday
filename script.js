@@ -667,7 +667,7 @@ $(document).ready(function () {
         {
             type: "image",
 
-            src: "images/memory2.jpeg",
+            src: "images/memory2.mp4",
 
             text:
                 "We really thought we were just taking a normal picture... " +
